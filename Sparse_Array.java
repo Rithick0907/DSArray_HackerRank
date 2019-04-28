@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Solution {
+public class Sparse_Array {
 
     // Complete the matchingStrings function below.
     //My Code Starts here
