@@ -12,7 +12,7 @@ public class Array2D_DS {
     // Complete the hourglassSum function below.
     static int hourglassSum(int[][] arr) {
         int[] a=new int[16];
-        int c=0,i,j,k,temp;
+        int c=0,i,j,k;
         for(i=0;i<12;i++)
         {
             a[i]=0;
@@ -30,19 +30,12 @@ public class Array2D_DS {
                 c++;
             }
         }
+        int max=a[0];
         for(i=0;i<16;i++)
         {
-        for(j=i+1;j<16;j++)
-        {
-            if(a[i]>a[j])
-            {
-                temp=a[i];
-                a[i]=a[j];
-                a[j]=temp;
-            }
+        max=Math.max(max,a[i]);
         }
-        }
-        return(a[15]);
+        return max;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
