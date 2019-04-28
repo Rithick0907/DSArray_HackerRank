@@ -41,7 +41,7 @@ public class Array2D_DS {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int[][] arr = new int[6][6];
 
@@ -54,10 +54,10 @@ public class Array2D_DS {
 
         int result = hourglassSum(arr);
         System.out.println("Largest Number:"+result);
-        /*bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
 
-        bufferedWriter.close();*/
+        bufferedWriter.close();
 
         scanner.close();
     }
