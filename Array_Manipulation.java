@@ -14,10 +14,9 @@ public class Array_Manipulation {
         long max;
         long[] a=new long[n];
         for(i=0;i<queries.length;i++)
-        {
             for(j=queries[i][0]-1;j<queries[i][1];j++)  //Because in Question they mean position which mean index=position-1;
                 a[j]+=queries[i][2];
-        }
+        
         max=a[0];
         for(i=0;i<n;i++)
         {
