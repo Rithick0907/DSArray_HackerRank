@@ -10,22 +10,13 @@ public class Array_Manipulation {
 
     // Complete the arrayManipulation function below.
     static long arrayManipulation(int n, int[][] queries) {
-        int n1=queries.length;
-        int n2=queries[0].length;
         int i,j;
-        long temp;
         long max;
         long[] a=new long[n];
-        for(i=0;i<n;i++)
+        for(i=0;i<queries.length;i++)
         {
-            a[i]=0;
-        }
-        for(i=0;i<n1;i++)
-        {
-          for(j=queries[i][0]-1;j<queries[i][1];j++) //Because in question they mean position which means an index before that position
-          {
-              a[j]+=queries[i][2];
-          }
+            for(j=queries[i][0]-1;j<queries[i][1];j++)  //Because in Question they mean position which mean index=position-1;
+                a[j]+=queries[i][2];
         }
         max=a[0];
         for(i=0;i<n;i++)
@@ -36,7 +27,6 @@ public class Array_Manipulation {
             }
         }
         return max;
-        return a[n-1];
     }
 
     private static final Scanner scanner = new Scanner(System.in);
