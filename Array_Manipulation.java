@@ -14,6 +14,7 @@ public class Array_Manipulation {
         int n2=queries[0].length;
         int i,j;
         long temp;
+        long max;
         long[] a=new long[n];
         for(i=0;i<n;i++)
         {
@@ -26,18 +27,15 @@ public class Array_Manipulation {
               a[j]+=queries[i][2];
           }
         }
+        max=a[0];
         for(i=0;i<n;i++)
         {
-            for(j=i+1;j<n;j++)
+            if(max<a[i])
             {
-                if(a[i]>a[j])
-                {
-                    temp=a[i];
-                    a[i]=a[j];
-                    a[j]=temp;
-                }
+                max=a[i];
             }
         }
+        return max;
         return a[n-1];
     }
 
